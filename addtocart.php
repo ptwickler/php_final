@@ -1,13 +1,26 @@
 <?php
 
-
-$prod_name = $_GET['product'];
+//session_start();
+$prod_name = $_GET['prod_name'];
 $quantity = $_GET['quantity'];
 
-function add_to_cart($quantity){
+require_once('FirePHPCore/FirePHP.class.php');
 
-    echo $quantity;
+if (!$firephp) {
+    ob_start();
+
+    $firephp = FirePHP::getInstance(true);
+
+}
+//TODO Now that I've changed the GET to store the product name and quantity, feeding the function the argument ofthe
+// object no longer works.
+
+function add_to_cart($prod_name){
+
+    print_r($prod_name);
     exit;
 }
 
-add_to_cart($quantity);
+add_to_cart($_SESSION['cart']);
+
+$firephp->log($_SESSION, 'session');

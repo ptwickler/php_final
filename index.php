@@ -1,8 +1,9 @@
 <?php
 
 
+// Deletes the session if the user has clicked "log in as someone else" option.
 if (isset($_GET['delete_session'])) {
-    session_start(); //must always use this command to access the session and its variables
+    session_start();
     session_destroy(); //force the session to end
 
     //Add in a page reload so that the session_destroy() will take effect
@@ -19,6 +20,15 @@ else {
     session_start();
 }
 
+require_once('FirePHPCore/FirePHP.class.php');
+
+if (!$firephp) {
+    ob_start();
+
+    $firephp = FirePHP::getInstance(true);
+
+}
+$_SESSION['cart'] = array();
 // I use includes to build the head and end of the html page
 require($_SERVER['DOCUMENT_ROOT'] ."/php_final/template_top.inc");
 
@@ -26,18 +36,24 @@ require($_SERVER['DOCUMENT_ROOT'] ."/php_final/template_top.inc");
 include_once($_SERVER['DOCUMENT_ROOT'] . "/php_final/products.php");
 include_once($_SERVER['DOCUMENT_ROOT'] . "/php_final/display.php");
 
+
+
+
+
+
 /*
  * @param $product
  * pulls the "properties" of the product arrays into a string to build the html for the display of the products
  */
 function display($product){
     $product = $product;
-    $product_display =  '<div class = "product_display">
-                         <div class = "prod_name">'.$product["name"].' </div>
+    $product_display =  '<form  method="GET" action="addtocart.php">
+                         <div class = "product_display">
+                         <input class="disp_name" type="text" value = "'.$product['name'] .'" name="prod_name" readonly>
                          <div class ="prod_img" ><img src = "./img/' . $product["img"].'.jpg"></div>
                          <div class = "prod_weight">'.$product["weight"] . '</div>
                          <div class = "prod_price">$'.$product["price"].'</div>
-                         <form  method="GET" action="addtocart.php">
+
                          <input type="text" size="5" name="quantity">
                          <input class="add_to_cart"  type="submit" value="Add to Cart" >
                          </form>
@@ -90,3 +106,5 @@ require($_SERVER['DOCUMENT_ROOT'] ."/php_final/template_bottom.inc");
 // the sessions array that will be used by the shopping cart page.
 
 //TODO make user registration form/php etc.
+
+$firephp->log($_SESSION, 'session');
