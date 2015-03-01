@@ -1,7 +1,8 @@
 <?php
 
 $quartz_orb = array(
-    'name' => 'quartz_orb',
+    'img' => 'quartz_orb',
+    'name' => 'quartz orb',
     'material' => 'quartz',
     'price' => '30.00',
     'weight' => '2lbs'
@@ -10,6 +11,7 @@ $quartz_orb = array(
 );
 
 $amethyst = array(
+    'img' => 'amethyst',
     'name' => 'amethyst',
     'material' => 'amethyst',
     'price' => '10.00',
@@ -18,13 +20,15 @@ $amethyst = array(
 );
 
 $catseye = array(
-    'name' => 'cats_eye',
+    'img' => 'cats_eye',
+    'name' => 'cats eye',
     'material' => 'cats eye',
     'price' => '$3.00',
     'weight' => '.02lbs'
 );
 
 $wizard = array(
+    'img' => 'wizard',
     'name' => 'wizard',
     'material' => 'pewter and quartz',
     'price' => '40.00',
@@ -32,6 +36,7 @@ $wizard = array(
 );
 
 $dragon = array(
+    'img' => 'dragon',
         'name' => 'dragon',
         'material' => 'pewter and amethyst',
         'price' => '50.00',

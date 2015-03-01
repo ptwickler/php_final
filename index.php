@@ -34,76 +34,21 @@ function display($product){
     $product = $product;
     $product_display =  '<div class = "product_display">
                          <div class = "prod_name">'.$product["name"].' </div>
-                         <div class ="prod_img" ><img src = "./img/' . $product["name"].'.jpg"></div>
+                         <div class ="prod_img" ><img src = "./img/' . $product["img"].'.jpg"></div>
                          <div class = "prod_weight">'.$product["weight"] . '</div>
                          <div class = "prod_price">$'.$product["price"].'</div>
-                         <input type="submit" value="Add to Cart" action="addtocart.php">
+                         <form  method="GET" action="addtocart.php">
+                         <input type="text" size="5" name="quantity">
+                         <input class="add_to_cart"  type="submit" value="Add to Cart" >
+                         </form>
 
     </div>';
 
     return $product_display;
 
-
 };
 
-// Handles the decisions about how to display the form based on the state of the session and then returns the html.
-function form_display($ind,$val_email){
 
-    $case = 0;
-    // If the user has not downloaded the file nor submitted a form, either successful or unsuccessful.
-    switch($ind) {
-
-
-        case 0:
-            $form = '<h4>Enter your name and email address to download the story:</h4>
-      <form method="GET" action = "index4.php">
-
-        <input type="text" size ="25" name="name" value="">
-        <label for="name">Enter your name</label><br/>
-
-        <input type="text" size="25" name="email" value=""/>
-        <label for="email">Enter your email address</label><br/>
-        <input type="SUBMIT" value ="Submit"/> -- Form no submit
-      </form>';
-
-            break;
-
-
-        // If the user has submitted an invalid email address.
-        case 1:
-            $case = 1;
-
-            $form = '<h4>Enter your name and email address to download the story:</h4>
-    <span class = "not_valid">That email address does not seem to be valid. Try again.</span>
-    <form method="GET" action = "index4.php">
-
-      <input type="text" size ="25" name="name" value="">
-      <label for="name">Enter your name</label><br/>
-
-      <input type="text" size="25" name="email" value=""/>
-      <label for="email">Enter your email address</label><br/>
-      <input type="SUBMIT" value ="Submit"/>
-    </form>';
-            break;
-
-        case 2:
-            $case = 2;
-            $form = 'Hello' . $_SESSION['name'] . ' DOOP , Click the link below to download the story.<br/>
-      <a  href="download4.php?email="' . $_GET['email'] . '&name=downloaded>Download the story!</a><br />
-      <a href="http://' . $_SERVER["HTTP_HOST"] . '/lab13/lab13_4/index4.php?delete_session=1">Not ' . $_SESSION['name'] . '</a>? Click the link to sign in<br />';
-
-            break;
-
-        case 3:
-            $case = 3;
-            $form = '<span class = "not_valid">I\'m sorry, this story can only be downloaded once per session.</span><br />
-        Hello, ' . $_SESSION['name'] . ' DOOP, Click the link below to download the story.<br/>
-      <a  href="#" disabled = "true">Download the story!</a><br />
-      <a href="http://' . $_SERVER['HTTP_HOST'] . '/lab13/lab13_4/index4.php?delete_session=1">Not ' . $_SESSION['name'] . '</a>? Click the link to sign in<br />';
-            break;
-    }
-    return $form;
-};
 
 
 
@@ -140,3 +85,8 @@ for ($i =0; $i < count($current_products); $i++){
 
 
 require($_SERVER['DOCUMENT_ROOT'] ."/php_final/template_bottom.inc");
+
+//Make the number of items in each product a form/text input. When you click "add to cart", it will add the item into
+// the sessions array that will be used by the shopping cart page.
+
+//TODO make user registration form/php etc.
