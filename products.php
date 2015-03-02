@@ -23,7 +23,7 @@ $catseye = array(
     'img' => 'cats_eye',
     'name' => 'cats eye',
     'material' => 'cats eye',
-    'price' => '$3.00',
+    'price' => '3.00',
     'weight' => '.02lbs'
 );
 

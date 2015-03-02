@@ -92,6 +92,8 @@ function validate_email($email) {
 
 }
 
+
+
 $current_products = array($amethyst,$quartz_orb,$wizard,$catseye,$dragon);
 
 $disp = '';
