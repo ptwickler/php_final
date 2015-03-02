@@ -96,6 +96,8 @@ function validate_email($email) {
 
 $current_products = array($amethyst,$quartz_orb,$wizard,$catseye,$dragon);
 
+$users = array();
+
 $disp = '';
 for ($i =0; $i < count($current_products); $i++){
     echo display($current_products[$i]);
