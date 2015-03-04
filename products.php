@@ -42,3 +42,11 @@ $dragon = array(
         'price' => '50.00',
         'weight' => '3lbs'
     );
+
+$elf = array(
+    'img'=> 'elf',
+    'name' => 'elf',
+    'material' => 'pewter',
+    'price' => '20.00',
+    'weight' => '2lbs'
+);

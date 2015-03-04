@@ -1,26 +1,40 @@
 <?php
+ini_set('display_errors', 1);
 
-
-// Deletes the session if the user has clicked "log in as someone else" option.
-if (isset($_GET['delete_session'])) {
+error_reporting(E_ALL);
+if (isset($_GET['out'])){
     session_start();
-    session_destroy(); //force the session to end
 
-    //Add in a page reload so that the session_destroy() will take effect
-    if($_SESSION && $_SESSION['name']){
-        $url = "http://".$_SERVER['HTTP_HOST']."/final/index.php";
-        header("Location: ".$url);
+    // I'll be honest. I had to poach the code in this if statement. I couldn't get the session ID to regenerate any
+    // other way. It would wipe out the data in the session, but it wouldn't renew the session ID. I was having some
+    // other problems and wanted to get this piece nailed down before I went on to look for another cause.
+    if (ini_get("session.use_cookies")) {
+        $params = session_get_cookie_params();
+        setcookie(session_name(), '', time() - 42000,
+            $params["path"], $params["domain"],
+            $params["secure"], $params["httponly"]
+        );
     }
+// END POACHED CODE
+    
+    // Finally, destroy the session.
+    session_destroy();
 
+    //Add in a page reload so that the session_destroy() will take effect*/
 
+        $url = "http://" . $_SERVER['HTTP_HOST'] . "/php_final/index.php?GOOP=1";
+
+        header("Location: ".$url) or die("Didn't work");
 }
 
-else {
-    // start the session
+if(!isset($_SESSION)) {
     session_start();
 }
 
+ob_start();
 require_once('FirePHPCore/FirePHP.class.php');
+
+
 
 if (!$firephp) {
     ob_start();
@@ -28,17 +42,25 @@ if (!$firephp) {
     $firephp = FirePHP::getInstance(true);
 
 }
+
+
 $_SESSION['cart'] = array();
 // I use includes to build the head and end of the html page
 require($_SERVER['DOCUMENT_ROOT'] ."/php_final/template_top.inc");
-
+/*echo' <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>
+Crystals, Charms, and Coffee
+</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="final.css">
+        </head>
+    </html>
+<body>';*/
 
 include_once($_SERVER['DOCUMENT_ROOT'] . "/php_final/products.php");
 include_once($_SERVER['DOCUMENT_ROOT'] . "/php_final/display.php");
-
-
-
-
 
 
 /*
@@ -66,43 +88,24 @@ function display($product){
 
 
 
-
-
-
-
-/*
- * @param $email
- * Validates an email address and returns it if it passes the test.
- */
-
-function validate_email($email) {
-    if ((filter_var($email, FILTER_VALIDATE_EMAIL) != true)) {
-        $url = "http://".$_SERVER['HTTP_HOST']."/lab13/lab13_4/index4.php?not_valid=1";
-        header("Location: ".$url);
-    }
-
-    elseif (filter_var($email, FILTER_VALIDATE_EMAIL) == true) {
-
-        $_SESSION[$email] = $email;
-
-
-    }
-
-    return $email;
-
-}
-
-
-
 $current_products = array($amethyst,$quartz_orb,$wizard,$catseye,$dragon);
 
-$users = array();
+
 
 $disp = '';
 for ($i =0; $i < count($current_products); $i++){
     echo display($current_products[$i]);
 }
 
+if (isset($_SESSION['logged']) && $_SESSION['logged']== 1){
+    echo "LOGGED IN";
+
+}
+
+if (!isset($_SESSION['logged']) || $_SESSION['logged'] !=1) {
+
+    echo "Not Logged in";
+}
 
 require($_SERVER['DOCUMENT_ROOT'] ."/php_final/template_bottom.inc");
 
