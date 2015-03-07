@@ -1,8 +1,12 @@
 <?php
+
+//for debug
 ini_set('display_errors', 1);
 
 error_reporting(E_ALL);
-if (isset($_GET['out'])){
+
+
+if (isset($_GET['out']) && $_GET['out']==1){
     session_start();
 
     // I'll be honest. I had to poach the code in this if statement. I couldn't get the session ID to regenerate any
@@ -16,13 +20,13 @@ if (isset($_GET['out'])){
         );
     }
 // END POACHED CODE
-    
+
     // Finally, destroy the session.
     session_destroy();
 
     //Add in a page reload so that the session_destroy() will take effect*/
 
-        $url = "http://" . $_SERVER['HTTP_HOST'] . "/php_final/index.php?GOOP=1";
+        $url = "http://" . $_SERVER['HTTP_HOST'] . "/php_final/index.php";
 
         header("Location: ".$url) or die("Didn't work");
 }
@@ -46,8 +50,10 @@ if (!$firephp) {
 
 $_SESSION['cart'] = array();
 // I use includes to build the head and end of the html page
-require($_SERVER['DOCUMENT_ROOT'] ."/php_final/template_top.inc");
-/*echo' <!DOCTYPE html>
+
+
+//require($_SERVER['DOCUMENT_ROOT'] ."/php_final/template_top.inc");
+print ' <!DOCTYPE html>
     <html lang="en">
         <head>
             <title>
@@ -57,7 +63,22 @@ Crystals, Charms, and Coffee
             <link rel="stylesheet" href="final.css">
         </head>
     </html>
-<body>';*/
+<body>
+<div>
+  <form class="login" value="Sign In" action="login.php" method="POST">
+    <label for="username">Name</label>
+      <input class="login" type="text" size="20" name="username"/>
+    <label for="password" class ="login">Password</label>
+      <input class="login" name="password" size="20">
+      <input type="submit" value="Sign In">
+  </form>
+</div>
+<form class="login" action="http://localhost/php_final/index.php?out=1" method="GET">
+  <input type="text" name="out" value="1" hidden>
+  <input type="submit" value="Sign Out">
+</form>
+
+';
 
 include_once($_SERVER['DOCUMENT_ROOT'] . "/php_final/products.php");
 include_once($_SERVER['DOCUMENT_ROOT'] . "/php_final/display.php");
