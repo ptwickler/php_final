@@ -27,10 +27,10 @@ function add_to_cart($products,$item,$quantity,$cart) {
     $order_quantity = $quantity;
     $item = $item;
     $products = $products;
-    $_SESSION['p_cart'][$item]['name'] =$item;
-    $_SESSION['p_cart'][$item]['quantity'] = $order_quantity;/*'quantity'=>$order_quantity)*/
+    $_SESSION['out_cart'][$item]['name'] =$item;
+    $_SESSION['out_cart'][$item]['quantity'] = $order_quantity;
 
-    // $_SESSION['p_cart'][$item]['name'] =>$item=>array('quantity'=>$quantity));
+
 
 
 
@@ -38,12 +38,12 @@ function add_to_cart($products,$item,$quantity,$cart) {
 }
 //TODO: remove this before submitting
 // For debug
-/*if (!$firephp) {
+if (!$firephp) {
     ob_start();
 
     $firephp = FirePHP::getInstance(true);
 
-}*/
+}
 
 if($_SESSION['sign_in'] == 1) {
     add_to_cart($products, $item, $quantity, $cart);
@@ -64,4 +64,4 @@ else {
 
 
 
-//$firephp->log($_SESSION, 'session');
+$firephp->log($_SESSION, 'session');

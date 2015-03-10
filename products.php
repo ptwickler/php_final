@@ -17,7 +17,7 @@ $products = array(
     ),
 
     'catseye'=> array(
-        'img' => 'cats_eye',
+        'img' => 'catseye',
         'name' => 'cats eye',
         'material' => 'cats eye',
         'price' => '3.00',

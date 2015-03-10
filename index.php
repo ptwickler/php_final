@@ -54,12 +54,12 @@ $_SESSION['cart'] = array();
 // I use includes to build the head and end of the html page
 
 
-if(isset($_SESSION['p_cart'])) {
-    $item = $_SESSION['p_cart'];
+if(isset($_SESSION['out_cart'])) {
+    $item = $_SESSION['out_cart'];
 }
 
-//require($_SERVER['DOCUMENT_ROOT'] ."/php_final/template_top.inc");
-print ' <!DOCTYPE html>
+include_once($_SERVER['DOCUMENT_ROOT'] ."/php_final/template_top.inc");
+/*print ' <!DOCTYPE html>
     <html lang="en">
         <head>
             <title>
@@ -69,7 +69,7 @@ Crystals, Charms, and Coffee
             <link rel="stylesheet" href="final.css">
         </head>
     </html>
-<body>
+<body>/*
 <div>
   <form class="login" value="Sign In" action="login.php" method="POST">
     <label for="username">Name</label>
@@ -98,11 +98,11 @@ if(isset($_SESSION['p_cart'])) {
 
 elseif (!isset($_SESSION['p_cart'])) {
     print  '<input name="checkout_button" type="text" readonly ><span class="require_auth">Sign in to Purchase Items</span><br></form></div>';
-}
+}*/
 
 //TODO Add an else statement that displays the empty cart window if no items in cart yet
 include_once($_SERVER['DOCUMENT_ROOT'] . "/php_final/products.php");
-include_once($_SERVER['DOCUMENT_ROOT'] . "/php_final/display.php");
+//include_once($_SERVER['DOCUMENT_ROOT'] . "/php_final/display.php");
 
 
 /*

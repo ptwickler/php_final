@@ -1,8 +1,27 @@
-
-
-div {
-    border: 1px solid red;
+body {
+    background-color: #cadef8;
 }
+
+img.banner {
+    padding: 2px;
+    position: relative;
+    border: 1px solid blue;
+
+
+
+
+
+}
+
+div.banner {
+    width: 75%;
+    margin: auto;
+    border: 1px solid black;
+    float: right;
+
+}
+
+
 
 .product_display {
     border: 1px solid red;
@@ -11,6 +30,7 @@ div {
     position: relative;
     float: left;
     margin: 10px;
+    visibility: hidden;
 
 }
 
@@ -42,17 +62,8 @@ input.disp_name {
     text-align: center;
 }
 
-table {
-  /*  position: relative;
-    float: left;
-    clear: both;*/
-    border: 1px solid yellow;
 
 
-}
-td {
-    border: 1px solid black;
-}
 
 .total_price {
     width: 20%;
@@ -72,4 +83,34 @@ td {
 span.require_auth {
     color: red;
     font-weight: bold;
+}
+
+.checkout_name {
+
+
+}
+
+.checkout_quantity {
+
+    text-align: center;
+
+}
+
+
+
+table {
+    border-collapse: collapse;
+}
+td {
+    padding: 4px 0 4px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-collapse: collapse;
+}
+
+form.login {
+    border: 1px solid yellow;
+    width: 10%;
+    float: left;
+    clear: both;
 }
