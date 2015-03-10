@@ -42,7 +42,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             $pw_match = preg_match('/^' . $pw . '$/', $value, $matches);
             if ($pw_match) {
 
-                $_SESSION['logged'] = 1;
+                $_SESSION['sign_in'] = 1;
                 $url = "http://" . $_SERVER['HTTP_HOST'] . "/php_final/index.php";
                 ob_clean();
                 header("Location: " . $url) or die("didn't redirect from login");

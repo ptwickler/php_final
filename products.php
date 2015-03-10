@@ -1,14 +1,14 @@
 <?php
 $products = array(
-    $quartz_orb = array(
-        'img' => 'quartz_orb',
+    'quartzorb' => array(
+        'img' => 'quartzorb',
         'name' => 'quartz orb',
         'material' => 'quartz',
         'price' => '30.00',
         'weight' => '2lbs'
     ),
 
-    $amethyst = array(
+     'amethyst'=> array(
         'img' => 'amethyst',
         'name' => 'amethyst',
         'material' => 'amethyst',
@@ -16,7 +16,7 @@ $products = array(
         'weight'=> '.5lbs'
     ),
 
-    $catseye = array(
+    'catseye'=> array(
         'img' => 'cats_eye',
         'name' => 'cats eye',
         'material' => 'cats eye',
@@ -24,7 +24,7 @@ $products = array(
         'weight' => '.02lbs'
     ),
 
-    $wizard = array(
+    'wizard' => array(
         'img' => 'wizard',
         'name' => 'wizard',
         'material' => 'pewter and quartz',
@@ -32,7 +32,7 @@ $products = array(
         'weight' => '1lb'
     ),
 
-    $dragon = array(
+    'dragon' => array(
         'img' => 'dragon',
         'name' => 'dragon',
         'material' => 'pewter and amethyst',
@@ -40,7 +40,7 @@ $products = array(
         'weight' => '3lbs'
     ),
 
-    $elf = array(
+    'elf' => array(
         'img'=> 'elf',
         'name' => 'elf',
         'material' => 'pewter',

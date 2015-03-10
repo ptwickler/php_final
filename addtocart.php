@@ -1,35 +1,67 @@
 <?php
 
 session_start();
-$prod_name = $_GET['prod_name'];
+$item = $_GET['item'];
 $quantity = $_GET['quantity'];
+$cart = $_SESSION['cart'];
+ini_set('display_errors', 1);
 
+error_reporting(E_ALL);
+
+// FOR debug. Remove before submission
 require_once('FirePHPCore/FirePHP.class.php');
 
-include_once('products.php');
+include_once('./products.php');
 
+// TODO Resmove before submitting
+// For Debug
+ob_start();
+
+
+// Grabs the items out of the cart and gets their relevant details from the array in products.php which it then pushes
+// into the "out cart" which will be used to create the shopping cart page.
+function add_to_cart($products,$item,$quantity,$cart) {
+
+
+    $cart = $cart;
+    $order_quantity = $quantity;
+    $item = $item;
+    $products = $products;
+    $_SESSION['p_cart'][$item]['name'] =$item;
+    $_SESSION['p_cart'][$item]['quantity'] = $order_quantity;/*'quantity'=>$order_quantity)*/
+
+    // $_SESSION['p_cart'][$item]['name'] =>$item=>array('quantity'=>$quantity));
+
+
+
+
+}
 //TODO: remove this before submitting
 // For debug
-if (!$firephp) {
+/*if (!$firephp) {
     ob_start();
 
     $firephp = FirePHP::getInstance(true);
 
-}
-$nameout = $products['$'.$prod_name]['name'];
+}*/
 
-//TODO Now that I've changed the GET to store the product name and quantity, feeding the function the argument of the
-// object no longer works.
-
-function add_to_cart($prod_name){
-   echo $nameout;
-    //$nameout = $products['$'.$prod_name]['name'];
+if($_SESSION['sign_in'] == 1) {
+    add_to_cart($products, $item, $quantity, $cart);
+    $url = "http://" . $_SERVER['HTTP_HOST'] . "/php_final/index.php";
+    header("Location: ".$url) or die("Didn't work");
 
 
 
-   echo $nameout;
 }
 
-add_to_cart($_GET['prod_name']);
+else {
 
-$firephp->log($_SESSION, 'session');
+    $url = "http://" . $_SERVER['HTTP_HOST'] . "/php_final/index.php?signed=0";
+    header("Location: ".$url) or die("Didn't work");
+
+}
+
+
+
+
+//$firephp->log($_SESSION, 'session');
