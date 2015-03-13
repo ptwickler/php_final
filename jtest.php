@@ -1,8 +1,11 @@
 <?php
+
+
+
 $ac_users = array('peter'=>array(
-        'pass'=>'12',
-        'email' => 'peter.twickler@gmail.com'
-    ),
+    'pass'=>'12',
+    'email' => 'peter.twickler@gmail.com'
+),
 
     'joe'=>array(
         'pass'=>'22',
@@ -15,3 +18,9 @@ $ac_users = array('peter'=>array(
     )
 );
 
+
+$jlist = json_encode($ac_users);
+
+$llist = json_decode($jlist,true);
+
+print_r($jlist);

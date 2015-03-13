@@ -29,7 +29,6 @@ function display_all_entries(){
     $pw = '';
     $database = 'blog';
 
-
     $db = new mysqli($host,$user,$pw,$database) or die("Cannot connect to MySQL.");
 
     $command = "SELECT * FROM blog_entry;";
@@ -43,7 +42,11 @@ function display_all_entries(){
 <title>My Entries
 </title>
 <link rel="stylesheet" href="http://ptwickle.userworld.com/phpsql1/blog.css">
-<body>';
+<body><h1>BLog Postsk</h1>
+<table BORDER="1">
+<tr><td>Name</td><td>Phone Number</td>
+<td>Address</td><td>Birthday</td></tr>
+';
 
     while ($data = $result->fetch_object()) {
         print '<div class="wrapper">
@@ -64,8 +67,8 @@ if ($_GET['entry'] == 1) {
     display_all_entries();
 }
 
-if($_request['blogId']) {
-    $blogId = $_request['blogId'];
+if($_GET['blogId']) {
+    $blogId = $_GET['blogId'];
 
 
     $host = '127.0.0.1';
@@ -75,30 +78,29 @@ if($_request['blogId']) {
 
     $db = new mysqli($host,$user,$pw,$database) or die("Cannot connect to MySQL.");
 
-    $command = "SELECT * FROM blog_entry where blogId =". $blogId . ";";
+    $command = "SELECT * FROM blog_entry where blogId =". $blogId . " order by post_date DESC;";
 
 
     $result = $db->query($command);
 
     //$data = $result->fetch_object();
 
-    print '<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Author Time
-</title>
-<link rel="stylesheet" href="blog.css">
-<body>';
+
 
     while ($data = $result->fetch_object()) {
-        print '<div class="wrapper">
-               <a href="blog_entry.php?blogID=' . $data->blogId . '">View Post</a>,<br>
+        print '<!DOCTYPE html><html lang="en">
+<head>
+<title>'. $data->author_name .'
+</title>
+<link rel="stylesheet" href="http://ptwickle.userworld.com/phpsql1/blog.css">
+<body><div class="wrapper">
+
                <div class="entry">' . $data->post_text . '</div><div class="post_date">'. $data->post_date . '</div>
                <div class="auth_name">Post by: ' . $data->author_name . '</div></div>';
 
     }
 
-    print '</body></html>';
+    print '<a href="blog_entry.html">Go back to the ent </body></html>';
     $result->free();
     $db->close();
 
