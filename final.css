@@ -30,7 +30,7 @@ div.banner {
     position: relative;
     float: left;
     margin: 10px;
-    visibility: hidden;
+   /* visibility: hidden;*/
 
 }
 

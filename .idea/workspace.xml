@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29140c21-ece6-40b0-b0df-767483ccbc2d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog_entry.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog_entry2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jtest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts.php" afterPath="$PROJECT_DIR$/accounts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_entry.php" afterPath="$PROJECT_DIR$/blog_entry.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/email.php" afterPath="$PROJECT_DIR$/img/email.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts.csv" afterPath="$PROJECT_DIR$/accounts.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final.css" afterPath="$PROJECT_DIR$/final.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template_top.inc" afterPath="$PROJECT_DIR$/template_top.inc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="php_final.iws" />
@@ -35,19 +32,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.375" vertical-offset="2052" max-vertical-offset="2565">
-              <caret line="155" column="17" selection-start-line="155" selection-start-column="10" selection-end-line="155" selection-end-column="17" />
-              <folding>
-                <marker date="1426020376000" expanded="true" signature="2894:3004" placeholder="..." />
-                <marker date="1426020376000" expanded="true" signature="3720:4486" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="checkout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -121,21 +105,31 @@
       <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.556962" vertical-offset="631" max-vertical-offset="2822">
-              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+            <state vertical-scroll-proportion="2.0617285" vertical-offset="1255" max-vertical-offset="2754">
+              <caret line="64" column="30" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="30" />
               <folding>
                 <element signature="e#6#138#0#PHP" expanded="true" />
-                <marker date="1426212272000" expanded="true" signature="1065:1498" placeholder="..." />
+                <marker date="1426215001000" expanded="true" signature="1532:1965" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accounts.csv" pinned="false" current-in-tab="true">
+      <file leaf-file-name="final.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/final.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1815">
+              <caret line="32" column="25" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accounts.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/accounts.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07281554" vertical-offset="0" max-vertical-offset="412">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.5" vertical-offset="0" max-vertical-offset="150">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -144,31 +138,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="template_top.inc" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/template_top.inc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.44649446" vertical-offset="419" max-vertical-offset="765">
+              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accounts.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/accounts.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="back acc.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/back acc.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
               <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jtest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jtest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="465">
-              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template_top.inc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template_top.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="419" max-vertical-offset="765">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -201,18 +195,18 @@
         <option value="$PROJECT_DIR$/img/email.php" />
         <option value="$PROJECT_DIR$/checkout.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/template_top.inc" />
-        <option value="$PROJECT_DIR$/final.css" />
         <option value="$PROJECT_DIR$/accounts.php" />
         <option value="$PROJECT_DIR$/jtest.php" />
         <option value="$PROJECT_DIR$/accounts.json" />
         <option value="$PROJECT_DIR$/blog_entry.php" />
         <option value="$PROJECT_DIR$/blog_entry2.php" />
         <option value="$PROJECT_DIR$/blog_entry.html" />
-        <option value="$PROJECT_DIR$/accounts.txt" />
         <option value="$PROJECT_DIR$/back acc.txt" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/accounts.csv" />
+        <option value="$PROJECT_DIR$/accounts.txt" />
+        <option value="$PROJECT_DIR$/final.css" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/template_top.inc" />
       </list>
     </option>
   </component>
@@ -334,7 +328,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27303183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2718053" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -375,17 +369,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/checkout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="405">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/final.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="510">
           <caret line="1" column="26" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -409,8 +397,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1426020376000" expanded="true" signature="2894:3004" placeholder="..." />
-            <marker date="1426020376000" expanded="true" signature="3720:4486" placeholder="..." />
+            <marker date="1426020376000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426020376000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -433,6 +421,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="120">
           <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -456,8 +445,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="195">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <marker date="1426020376000" expanded="true" signature="2894:3004" placeholder="..." />
-            <marker date="1426020376000" expanded="true" signature="3720:4486" placeholder="..." />
+            <marker date="1426020376000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426020376000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -480,6 +469,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="120">
           <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -503,8 +493,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="195">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <marker date="1426020376000" expanded="true" signature="2894:3004" placeholder="..." />
-            <marker date="1426020376000" expanded="true" signature="3720:4486" placeholder="..." />
+            <marker date="1426020376000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426020376000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -527,6 +517,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="120">
           <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -639,13 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/final.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1815">
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/products.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="825">
@@ -657,14 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1080">
           <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template_top.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="419" max-vertical-offset="765">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -681,8 +657,8 @@
         <state vertical-scroll-proportion="-11.375" vertical-offset="2052" max-vertical-offset="2565">
           <caret line="155" column="17" selection-start-line="155" selection-start-column="10" selection-end-line="155" selection-end-column="17" />
           <folding>
-            <marker date="1426020376000" expanded="true" signature="2894:3004" placeholder="..." />
-            <marker date="1426020376000" expanded="true" signature="3720:4486" placeholder="..." />
+            <marker date="1426020376000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426020376000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -739,6 +715,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/back acc.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5" vertical-offset="0" max-vertical-offset="150">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/final.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1815">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/checkout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.5" vertical-offset="567" max-vertical-offset="1845">
@@ -765,34 +768,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back acc.txt">
+    <entry file="file://$PROJECT_DIR$/accounts.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.556962" vertical-offset="631" max-vertical-offset="2822">
-          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+        <state vertical-scroll-proportion="2.0617285" vertical-offset="1255" max-vertical-offset="2754">
+          <caret line="64" column="30" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="30" />
           <folding>
             <element signature="e#6#138#0#PHP" expanded="true" />
-            <marker date="1426212272000" expanded="true" signature="1065:1498" placeholder="..." />
+            <marker date="1426215001000" expanded="true" signature="1532:1965" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts.csv">
+    <entry file="file://$PROJECT_DIR$/template_top.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07281554" vertical-offset="0" max-vertical-offset="412">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.44649446" vertical-offset="419" max-vertical-offset="765">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
   </component>

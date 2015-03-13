@@ -34,7 +34,7 @@ elseif (!isset($_SESSION['sign_in'])) {
         <label for="username">Name</label><br>
         <input class="login" type="text" size="20" name="username"/><br>
         <label for="password" class ="login">Password</label><br>
-        <input class="login" name="password" size="20"><br>
+        <input type="password" class="login" name="password" size="20"><br>
         <input type="submit" value="Sign In">
     </form>
 
