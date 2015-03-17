@@ -25,6 +25,8 @@ if (!$firephp) {
 require_once('FirePHPCore/FirePHP.class.php');
 
 include_once('./products.php');
+require_once('functions.php');
+
 print '<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +42,7 @@ print '<!DOCTYPE html>
 
 
 
-    <form class="login" value="Sign In" action="login.php" method="POST">
+    <form class="login" name=""Sign In" action="login.php" method="POST">
         <label for="username">Name</label><br>
         <input class="login" type="text" size="20" name="username"/><br>
         <label for="password" class ="login">Password</label><br>
@@ -65,28 +67,7 @@ else {
 
 
 }
-#-------------#
-# Functions   #
-#-------------#
 
-function build_out_cart($cart,$products){
-
-    $out_cart = '';
-    $total = 0;
-
-
-    foreach($cart as $key=>$value) {
-        $product = $products[$key];
-
-      $out_cart .= '<tr><td class="checkout_name">' . $product['name'] . '</td><td class="checkout_quantity">' . $cart[$key]['quantity'] . '</td><td class="checkout_price">$' . $product['price'] * intval($cart[$key]['quantity']) .'.00</td></tr>';
-      $total += $product['price'] * intval($cart[$key]['quantity']);
-
-    }
-
-   $out_cart .= '</tbody></table><div class="total_price"> Your Total: $' .$total . '.00';
-    return $out_cart;
-
-}
 
 
 $out_table = build_out_cart($items,$products);
@@ -106,12 +87,21 @@ echo '<!--<!DOCTYPE html>
           <hr>
           <br>
           <br>
-            <table><tbody><th>Item</th><th>Quantity</th><th>Price</th>' . $out_table .  '</div></body></html>';
+            <table><tbody><th>Item</th><th>Quantity</th><th>Price</th>' . $out_table .  '</div></body></html>
+<form name = "purchase" action="checkout.php?mail=1">
+  <input type="text" hidden name="mail" value="1">
+  <input type="submit" value="complete purchase">
+</form>';
 
 
 $firephp->log($_SESSION, 'session');
 
-?>
+
+if (isset($_GET['mail']) && $_GET['mail'] == 1) {
+    confirm_email($_SESSION['username']);
+
+}
+
 
 
 

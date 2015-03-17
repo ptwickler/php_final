@@ -12,7 +12,12 @@
 <div class="banner"><img class="banner" src="img/banner.jpg"></div>
 
 
-<div id="cart_disp">Your Cart:<br><?php
+<?php
+
+ini_set('display_errors', 1);
+
+error_reporting(E_ALL);
+
 print '<form name="checkout_button" action="checkout.php" method="POST">';
 if (isset($_SESSION['sign_in']) && $_SESSION['sign_in'] == 1) {
     if (isset($_SESSION['out_cart'])) {
@@ -22,7 +27,7 @@ if (isset($_SESSION['sign_in']) && $_SESSION['sign_in'] == 1) {
 
 
         }
-        print '<input type="submit" value="Complete Checkout" ></form></div>';
+        print '<input type="submit" value="Complete Checkout" ></form>';
     }
 }
 elseif (!isset($_SESSION['sign_in'])) {
@@ -30,7 +35,7 @@ elseif (!isset($_SESSION['sign_in'])) {
 
 }?>
 
-    <form class="login" value="Sign In" action="login.php?log=1" method="POST">
+    <form class="login"  action="login.php?log=1" method="POST">
         <label for="username">Name</label><br>
         <input class="login" type="text" size="20" name="username"/><br>
         <label for="password" class ="login">Password</label><br>

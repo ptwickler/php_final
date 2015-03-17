@@ -78,6 +78,7 @@ input.disp_name {
 
 .checkout_list {
     border: 0;
+    background-color: #cadef8;
 }
 
 span.require_auth {

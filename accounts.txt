@@ -1,6 +1,3 @@
-peter,12,peter.twickler@gmail.com
-buck,tug,ou
-Bubby,bub@bub.com,goop
-Chubbum,Bugg@chub.com,hoop
-PUppy,Pup@pup.com,ug
-Gorgon,thedefiler@defiler.com,defile
+top,tp,pass
+peter,peter.twickler@gmail.com,12
+dubby,bub,com
